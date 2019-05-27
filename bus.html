@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>채연채연</h1>
+    <script>
+        
+         let h1 = document.getElementsByTagName("h1")
+         let body = document.querySelector("body") 
+         
+         let colors = function rgb(r, g, b){
+           r = Math.floor(Math.random()*200);
+           g = Math.floor(Math.random()*200);
+           b = Math.floor(Math.random()*200);
+           let abc = ["rgb(",r,",",g,",",b,")"].join("");
+           return abc;
+            }
+         
+
+         setInterval(function(){
+             h1[0].style.color = colors();
+             body.style.backgroundColor= colors();
+         },1000)  
+           
+           
+    console.log(h1)
+    console.log(body)
+        
+
+    </script>
+</body>
+</html>
